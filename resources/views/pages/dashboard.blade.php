@@ -57,8 +57,21 @@ Dashboard
                     </tr>
                 </thead>
                 <tbody>
-                    <?php // @include('layout.partials.file-explorer') ?>  
+                    <?php // @include('layout.partials.file-explorer') ?>
                     <?php // @include('layout.partials.file-explorer-2') ?>
+
+
+<script type="text/javascript">
+
+const dirTree = require("directory-tree");
+const tree = dirTree("/resources");
+
+console.log($tree);
+
+</script>
+
+                    
+                    <?php // @include('layout.partials.file-explorer-3') ?>
                 </tbody>
             </table>
         </div>

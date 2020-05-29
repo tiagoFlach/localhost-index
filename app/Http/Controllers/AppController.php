@@ -11,6 +11,7 @@ class AppController extends Controller
     }
 
     public function infophp(){
-    	return view('pages.php-info');
+        echo 'oi';
+    	//return view('pages.phpinfo');
     }
 }

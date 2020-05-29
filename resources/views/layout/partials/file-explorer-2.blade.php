@@ -5,50 +5,50 @@
 
 	
 
-// const testFolder = './tests/';
-// const fs = require('fs');
+const testFolder = '/';
+const fs = require('fs');
 
-// fs.readdir(testFolder, (err, files) => {
-// 	files.forEach(file => {
-// 		console.log(file);
-// 	});
-// });
-
-
-
-
-// const fs = require("fs")
-// fs.readdir("./", (err, paths) => {
-// 	console.log(paths)
-// })
+fs.readdir(testFolder, (err, files) => {
+	files.forEach(file => {
+		console.log(file);
+	});
+});
 
 
 
-// const testFolder = './dir'
-// const fs = require('fs');
 
-// function readDir(dir){
+const fs = require("fs")
+fs.readdir("./", (err, paths) => {
+	console.log(paths)
+})
 
-// 	let struct = {}
 
-// 	fs
-// 	.readdirSync(dir)
-// .sort((a, b) => fs.statSync(dir +"/"+ a).mtime.getTime() - fs.statSync(dir +"/"+ b).mtime.getTime()) //É AQUI QUE A MÁGICA ACONTECE
-// .forEach(file => {
 
-// 	if( fs.lstatSync(dir+"/"+file).isFile() ){
-// 		struct[file] = null
-// 	}
-// 	else if( fs.lstatSync(dir+"/"+file).isDirectory() ){
-// 		struct[file] = readDir(dir+"/"+file)
-// 	}
+const testFolder = './dir'
+const fs = require('fs');
 
-// })
+function readDir(dir){
 
-// return struct
+	let struct = {}
 
-// }
-// console.log( readDir(testFolder) );
+	fs
+	.readdirSync(dir)
+.sort((a, b) => fs.statSync(dir +"/"+ a).mtime.getTime() - fs.statSync(dir +"/"+ b).mtime.getTime()) //É AQUI QUE A MÁGICA ACONTECE
+.forEach(file => {
+
+	if( fs.lstatSync(dir+"/"+file).isFile() ){
+		struct[file] = null
+	}
+	else if( fs.lstatSync(dir+"/"+file).isDirectory() ){
+		struct[file] = readDir(dir+"/"+file)
+	}
+
+})
+
+return struct
+
+}
+console.log( readDir(testFolder) );
 
 
 
