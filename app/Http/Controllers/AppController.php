@@ -10,7 +10,7 @@ class AppController extends Controller
     	return view('pages.dashboard');
     }
 
-    //public function infophp(){
-    //	return view('pages.php-info');
-    //}
+    public function infophp(){
+    	return view('pages.php-info');
+    }
 }

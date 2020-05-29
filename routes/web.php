@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'AppController@dashboard')->name('dashboard');
 
-Route::get('phpinfo', function(){
-	return view('pages.php-info');
-})->name('phpinfo');
+Route::get('phpinfo', 'AppController@infophp')->name('phpinfo');
+
+
+
+//Route::get('phpinfo', function(){
+//	return view('pages.php-info');
+//})->name('phpinfo');
