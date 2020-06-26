@@ -11,14 +11,17 @@
     },
     "devDependencies": {
         "axios": "^0.19",
-        "cross-env": "^7.0",
-        "laravel-mix": "^5.0.1",
+        "cross-env": "^7.0.2",
+        "directory-tree": "^2.2.4",
+        "laravel-mix": "^5.0.4",
         "lodash": "^4.17.13",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.15.2",
-        "sass-loader": "^8.0.0"
+        "sass": "^1.26.9",
+        "sass-loader": "^8.0.0",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "directory-tree": "^2.2.4"
+        "express": "^4.17.1",
+        "globby": "^11.0.1"
     }
 }

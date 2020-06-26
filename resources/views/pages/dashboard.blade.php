@@ -6,6 +6,14 @@ Dashboard
 
 @section('page-content')
 
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+
 <!-- Page Content -->
 <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
@@ -36,11 +44,15 @@ Dashboard
 
 
 
+<!----------------------------------------------------------------------------->
+
+
+
 <!-- Page Content -->
 <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">/html</h6>
+        <h6 class="m-0 font-weight-bold text-primary">/html ESSA AQUI</h6>
     </div>
 
     <!-- Card Body -->
@@ -61,13 +73,25 @@ Dashboard
                     <?php // @include('layout.partials.file-explorer-2') ?>
 
 
+
 <script type="text/javascript">
+    // const globby = require('globby');
+    // const listAllFilesAndDirs = dir => globby(`${dir}/**/*`);
+    
 
-const dirTree = require("directory-tree");
-const tree = dirTree("/resources");
+    // (async () => {
+    //   const result = await listAllFilesAndDirs(process.cwd());
+    //   console.log(result);
+    // })();
+</script>
 
-console.log($tree);
 
+
+<script type="text/javascript">
+    const dirTree = require("directory-tree");
+    const tree = dirTree("/resources");
+
+    console.log($tree);
 </script>
 
                     

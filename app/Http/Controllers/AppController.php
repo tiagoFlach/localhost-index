@@ -10,8 +10,8 @@ class AppController extends Controller
     	return view('pages.dashboard');
     }
 
-    public function infophp(){
-        echo 'oi';
-    	//return view('pages.phpinfo');
-    }
+    // public function infophp(){
+    //     echo 'oi';
+    // 	return view('pages.phpinfo');
+    // }
 }

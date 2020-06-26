@@ -18,7 +18,7 @@
 //     console.log(arrayFinal[0]);
 // });
 
-const listDirectories = require('list-directories');
+// const listDirectories = require('list-directories');
 
 
 
@@ -29,24 +29,24 @@ function showAvailableDrives()
 
 function getDriveList()
 { 
-    var fso, s, n, e, x;
-    fso = new ActiveXObject('Scripting.FileSystemObject');
-    e = new Enumerator( fso.Drives );
-    s = '';
-    do
-    { 
-        x = e.item();
-        s = s + x.DriveLetter;
-        s += ':- ';
-        if ( x.DriveType == 3 ) n = x.ShareName;
-        else if ( x.IsReady ) 
-            n = x.VolumeName;
-        else n = '[Drive not ready]';
-            s += n + '<br>';
-            e.moveNext();
-    } 
-    while ( !e.atEnd() );
-    return( s );
+    // var fso, s, n, e, x;
+    // fso = new ActiveXObject('Scripting.FileSystemObject');
+    // e = new Enumerator( fso.Drives );
+    // s = '';
+    // do
+    // { 
+    //     x = e.item();
+    //     s = s + x.DriveLetter;
+    //     s += ':- ';
+    //     if ( x.DriveType == 3 ) n = x.ShareName;
+    //     else if ( x.IsReady ) 
+    //         n = x.VolumeName;
+    //     else n = '[Drive not ready]';
+    //         s += n + '<br>';
+    //         e.moveNext();
+    // } 
+    // while ( !e.atEnd() );
+    // return( s );
 } 
 
 
