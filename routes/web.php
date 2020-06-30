@@ -21,7 +21,10 @@ Route::get('/', 'AppController@dashboard')->name('dashboard');
 
 Route::view('phpinfo', 'pages.phpinfo')->name('phpinfo');
 
+Auth::routes();
 
-//Route::get('phpinfo', function(){
-//	return view('pages.php-info');
-//})->name('phpinfo');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

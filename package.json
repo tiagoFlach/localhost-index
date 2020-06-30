@@ -11,20 +11,46 @@
     },
     "devDependencies": {
         "axios": "^0.19",
+        "bootstrap": "^4.0.0",
         "cross-env": "^7.0.2",
         "directory-tree": "^2.2.4",
+        "gulp": "^4.0.2",
+        "jquery": "^3.2",
         "laravel-mix": "^5.0.4",
         "lodash": "^4.17.13",
-        "resolve-url-loader": "^3.1.0",
-        "sass": "^1.26.9",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
-        "vue-template-compiler": "^2.6.11"
+        "vue": "^2.5.17",
+        "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
         "express": "^4.17.1",
         "fs": "0.0.1-security",
         "globby": "^11.0.1",
-        "gulp": "^4.0.2",
-        "jquery": "^3.5.1"
-    }
+        "jquery": "^3.5.1",
+        "jquery-easing": "0.0.1",
+        "require": "^2.4.20",
+        "requirejs": "^2.3.6",
+        "startbootstrap-sb-admin-2": "^4.1.1"
+    },
+    "name": "localhost-index",
+    "description": "",
+    "version": "1.0.0",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tiagoFlach/localhost-index.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tiagoFlach/localhost-index/issues"
+    },
+    "homepage": "https://github.com/tiagoFlach/localhost-index#readme"
 }

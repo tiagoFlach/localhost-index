@@ -91,6 +91,16 @@ Dashboard
 
 
 <script type="text/javascript">
+
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end('Hello World!');
+}).listen(8080);
+
+
+
     const dirTree = require("directory-tree");
     const tree = dirTree("/resources");
 
