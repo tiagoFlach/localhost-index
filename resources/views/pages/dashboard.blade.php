@@ -72,9 +72,9 @@ Dashboard
                     </tr>
                 </thead>
                 <tbody>
-                    <?php // @include('layout.partials.file-explorer') ?>
+                    <?php //var_dump($localhost_path); ?>
+                    @include('layout.partials.file-explorer')
                     <?php // @include('layout.partials.file-explorer-2') ?>
-
 
 
 <script type="text/javascript">
@@ -88,23 +88,12 @@ Dashboard
     // })();
 </script>
 
-
-
 <script type="text/javascript">
 
-var http = require('http');
+    //const dirTree = require("directory-tree");
+    //const tree = dirTree("/resources");
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end('Hello World!');
-}).listen(8080);
-
-
-
-    const dirTree = require("directory-tree");
-    const tree = dirTree("/resources");
-
-    console.log($tree);
+    //console.log($tree);
 </script>
 
                     

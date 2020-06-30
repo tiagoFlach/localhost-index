@@ -2,5 +2,5 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/app-assets/vendor/jquery/jquery.min.js": "/app-assets/vendor/jquery/jquery.min.js",
-    "/app-assets/vendor/jquery-easing/jquery-easing.min.js": "/app-assets/vendor/jquery-easing/jquery-easing.min.js"
+    "/app-assets/vendor/jquery-easing/jquery-easing.1.3.umd.min.js": "/app-assets/vendor/jquery-easing/jquery-easing.1.3.umd.min.js"
 }
