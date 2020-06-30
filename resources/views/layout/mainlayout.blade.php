@@ -5,6 +5,8 @@
 
     @include('layout.partials.head')
 
+    @yield('scripts-js')
+
 </head>
 <body id="page-top">
     
@@ -45,6 +47,8 @@
     @include('layout.partials.scroll')    
 
     @include('layout.partials.footer-scripts')
+
+    
 
 </body>
 </html>

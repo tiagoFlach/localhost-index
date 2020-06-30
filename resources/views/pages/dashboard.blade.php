@@ -4,6 +4,9 @@
 Dashboard
 @endsection
 
+@section('scripts-js')
+@endsection
+
 @section('page-content')
 
 
