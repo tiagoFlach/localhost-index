@@ -16,4 +16,4 @@
 <script src="{{asset('app-assets/js/demo/chart-pie-demo.js')}}"></script>
 
 
-<script src="{{asset('js/app.js')}}"></script>
+<!-- <script src="{{asset('js/app.js')}}"></script> -->

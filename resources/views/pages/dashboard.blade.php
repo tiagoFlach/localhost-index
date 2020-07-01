@@ -7,6 +7,11 @@ Dashboard
 @section('scripts-js')
 @endsection
 
+@section('custom-style')
+<!-- Custom style -->
+<!-- <link href="{{ asset('app-assets/css/file-explorer.css') }}" rel="stylesheet"> -->
+@endsection
+
 @section('page-content')
 
 
