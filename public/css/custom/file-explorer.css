@@ -1,0 +1,19 @@
+.collapse-row.collapsed + tr {
+    display: none;
+}
+
+
+/* Links para GitHub */
+.github {
+    float: right !important;
+}
+a.github {
+    color: #858796;
+}
+a.github :hover {
+    color: black;
+}
+.github i {
+    vertical-align: middle;
+}
+/* ----------  ---------- */
