@@ -10,7 +10,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item <?php if ($page_active == 'home') { echo "active"; } ?>">
         <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-anchor"></i>
             <span>Home</span>
@@ -26,7 +26,7 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item <?php if ($page_active == 'phpinfo') { echo "active"; } ?>">
         <a class="nav-link" href="{{ route('phpinfo') }}">
             <i class="fas fa-fw fa-info"></i>
             <span>PHP info</span>

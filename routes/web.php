@@ -18,4 +18,6 @@ Route::get('/', 'AppController@home')->name('home');
 Route::post('/listDir', 'AppController@listDir')->name('listDir');
 Route::get('/listDir', 'AppController@listDir')->name('listDir');
 
-Route::view('phpinfo', 'pages.phpinfo')->name('phpinfo');
+Route::view('phpinfo', 'pages.phpinfo', [
+    'page_active' => 'phpinfo'
+])->name('phpinfo');

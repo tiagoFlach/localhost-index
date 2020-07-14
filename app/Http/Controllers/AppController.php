@@ -13,20 +13,21 @@ class AppController extends Controller
 
     	return view('pages.home', [
             // 'dir_tree' => $dir_tree,
-            'localhost_path' => $localhost_path
+            'localhost_path' => $localhost_path,
+            'page_active' => 'home'
         ]);
     }
 
     public function listDir(){
-        
+
         if(isset($_POST['directory'])){
             $directory = $_POST['directory'];
         } else {
             $directory = $_SERVER['DOCUMENT_ROOT'];
-        }   
-        
+        }
+
         $array = array();
-        
+
         foreach (new \DirectoryIterator($directory) as $path) {
             if (! $path->isDot()){
                 $array[$path->getPathname()]['ATime'] = $path->getATime();
