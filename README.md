@@ -17,6 +17,14 @@ This is a smart auto-index for your localhost.
 - MySql
 - Web Browser
 
+### TO DO
+- [ ] Listar arquivos recursivamente
+- [ ] Listagem em ordem alfabética
+- [ ] Melhorar o README.md
+- [ ] Melhorar link ativo no menu (nav)
+- [ ] Mostrar quando algum componente for atualizado
+- [ ] Seleção de idioma
+- [ ] Login com GitHub (pegar a foto de perfil)
 
 
 ## Contributing
