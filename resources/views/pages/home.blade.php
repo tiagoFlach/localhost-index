@@ -18,8 +18,6 @@
 
 
 @section('page-content')
-
-
 <!-- Page Content -->
 <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
@@ -109,6 +107,7 @@
 <!-- <script src="{{ asset('js/custom/file-explorer.js') }}"></script> -->
 
 <script src="{{ asset('vendor/jquery-treegrid/js/jquery.treegrid.min.js') }}"></script>
+<!-- <script src="{{ asset('vendor/jquery-treegrid/js/jquery.treegrid.bootstrap3.js') }}"></script> -->
 
 <script>
     $.ajaxSetup({
@@ -117,60 +116,48 @@
         }
     });
 
-    
-    function listDir(dir, file){
+    $(document).ready(function() {
+        $('.tree').treegrid();
+        $('#tree').treegrid();
+    });    
 
+    $('body').onload = listDir('{{$localhost_path}}', 'tbody');
+
+    function listDir(path, htmlId){
         $.ajax({
             url: "{{ route('listDir') }}",
             type: "post",
             data: {
-                'directory': dir
+                'directory': path
             },
             dataType: "json",
-            success: function(response){
-                console.log(response);
-                $("#".file).append('<td>oi' + response + '</td>');
-                
+            success: function(response){                
+                $.each(response, function(i, val){
+                    line1 = "<tr>";
+                    line2 = "<td></td>";
+                    filename = "<td>" + val.Filename  + "</td>";
+                    size = "<td>" + val.Size + "</td>";
+                    created = "<td class=\"text-right\">" + val.CTime + "</td>";
+                    modified = "<td class=\"text-right\">" + val.MTime + "</td>";
+                    line3 = "</tr>";
+                    $("#tree " + htmlId).append(line1 + line2 + filename + size + created + modified + line2 + line3);
+                })
             }
+        });
+    };
+
+
+    function printDir(data, htmlId){
+        $.each(data, function(i, val){
+            line1 = "<tr>";
+            line2 = "<td></td>";
+            filename = "<td>" + val.Filename  + "</td>";
+            size = "<td>" + val.Size + "</td>";
+            created = "<td class=\"text-right\">" + val.CTime + "</td>";
+            modified = "<td class=\"text-right\">" + val.MTime + "</td>";
+            line3 = "</tr>";
+            $("#tree tbody").append(line1 + line2 + filename + size + created + modified + line2 + line3);
         })
-
-        // $.post("{{ route('listDir') }}",
-        // {
-        //     directory: dir
-        // },
-        // function(data){
-        //     $("#result").append('<p>' + data + '</p>');
-        //     $("#result").load("tbody", {peoples:peoples});
-        // })
-    }
-</script>
-
-
-<script type="text/javascript">
-    $('.tree').treegrid();
-
-    $('#tree').treegrid();
-
-    $.ajax({
-        url: "{{ route('listDir') }}",
-        type: "post",
-        dataType: "json",
-        success: function(response){
-            console.log(response);
-            
-            // $("#tree tbody").append('<tr><td>' + response['/var/www/html/Laravel']['Filename'] + '</td></tr>');
-            $.each(response, function(i, val){
-                line1 = "<tr>";
-                line2 = "<td></td>";
-                filename = "<td>" + val.Filename  + "</td>";
-                size = "<td>" + val.Size + "</td>";
-                created = "<td class=\"text-right\">" + val.CTime + "</td>";
-                modified = "<td class=\"text-right\">" + val.MTime + "</td>";
-                line3 = "</tr>";
-                $("#tree tbody").append(line1 + line2 + filename + size + created + modified + line2 + line3);
-            })
-        }
-    })
-
+    };
 </script>
 @endsection
