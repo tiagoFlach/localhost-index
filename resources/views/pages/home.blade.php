@@ -122,6 +122,7 @@
     });    
 
     $('body').onload = listDir('{{$localhost_path}}', 'tbody');
+    var treegrid_count = 1;
 
     function listDir(path, htmlId){
         $.ajax({
@@ -131,32 +132,32 @@
                 'directory': path
             },
             dataType: "json",
-            success: function(response){                
-                $.each(response, function(i, val){
-                    line1 = "<tr>";
-                    line2 = "<td></td>";
-                    filename = "<td>" + val.Filename  + "</td>";
-                    size = "<td>" + val.Size + "</td>";
-                    created = "<td class=\"text-right\">" + val.CTime + "</td>";
-                    modified = "<td class=\"text-right\">" + val.MTime + "</td>";
-                    line3 = "</tr>";
-                    $("#tree " + htmlId).append(line1 + line2 + filename + size + created + modified + line2 + line3);
-                })
+            success: function(response){
+                printDir(response, htmlId)
             }
         });
     };
 
-
     function printDir(data, htmlId){
         $.each(data, function(i, val){
-            line1 = "<tr>";
+
+            if(val.isDir){
+                line1 = "<tr class=\"treegrid-" + treegrid_count + "\">";
+                adicional = "<tr id=\"" + i + "\"></tr>"
+                treegrid_count ++;
+            } else {
+                adicional = "";
+                line1 = "<tr>";
+            }
+
             line2 = "<td></td>";
             filename = "<td>" + val.Filename  + "</td>";
             size = "<td>" + val.Size + "</td>";
             created = "<td class=\"text-right\">" + val.CTime + "</td>";
             modified = "<td class=\"text-right\">" + val.MTime + "</td>";
             line3 = "</tr>";
-            $("#tree tbody").append(line1 + line2 + filename + size + created + modified + line2 + line3);
+            $("#tree " + htmlId).append(line1 + line2 + filename + size + created + modified + line2 + line3 + adicional);
+            
         })
     };
 </script>
