@@ -2,11 +2,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content="Tiago Lucas Flach">
 
 <title>
 	Localhost @yield('title')
 </title>
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff8a01"> -->
 
 <!-- Custom fonts for this template-->
 <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
